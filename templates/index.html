@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>URL Shortner</title>
+    <style>
+        nav {
+            background-color: #001C30;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-family: sans-serif;
+        }
+
+        .container {
+            padding-top: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .box {
+            width: 600px;
+            height: 400px;
+            background-color: #176B87;
+            padding: 20px;
+        }
+
+        .text-box {
+            width: 90%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #DAFFFB;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <h1>URL Shortner</h1>
+    </nav>
+    <div class="container">
+        <div class="box">
+            <h1 style="text-align: center;color: #64CCC5;">URL Shortner</h1>
+            <form method="post">
+                <h2 style="color: #64CCC5;">Shorten a long URL</h2>
+                <input type="text" name="original_url" class="text-box" value="{{ original_url }}"
+                    placeholder="Shorten a long URL">
+                <h2 style="color: #64CCC5;">Customize your link</h2>
+                <div>
+                    <p><select style="width: 45%;height: 40px;">
+                            <option>http://127.0.0.1:5000</option>
+                        </select>
+                        <input type="text" style="width: 43%;height: 35px;" name="short_url" value="{{ original_url }}" placeholder="Enter Short URL">
+                    </p>
+                </div>
+                <input type="submit" style="width: 43%;height: 35px;color: #64CCC5;" value="Shorten URL">
+            </form>
+        </div>
+    </div>
+
+</html>
