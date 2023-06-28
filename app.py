@@ -20,8 +20,16 @@ def index_post():
     original_url = data['original_url']
     short_url = data['short_url']
 
-    crud.add_url(data)        
-    return render_template('index.html',original_url=original_url,short_url=short_url)
+    crud.add_url(data)  
+    if 'https://' in original_url:
+        link = original_url
+    elif 'http://' in original_url:
+        link = original_url
+    else:
+        link = 'https://'+original_url
+
+         
+    return render_template('index.html',original_url=original_url,short_url=short_url,flag=True,link=link)
 
 
 @app.route('/<short_url>')

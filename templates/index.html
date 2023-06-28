@@ -57,6 +57,9 @@
                     </p>
                 </div>
                 <input type="submit" style="width: 43%;height: 35px;color: #64CCC5;" value="Shorten URL">
+                {% if flag %}
+                <a href="{{ link }}"><input type="button" style="width: 43%;height: 35px;color: #64CCC5;" value="Try URL"></a>
+                {% endif %}
             </form>
         </div>
     </div>
